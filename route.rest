@@ -1,0 +1,52 @@
+
+
+GET http://localhost:3000/players
+
+
+GET http://localhost:3000/users
+
+
+POST http://localhost:3000/users
+content-type: application/json
+
+{
+    "username": "Merlin",
+    "tags": "Rank-Diamond, Class-Mage",
+    "questsCompleted": 0
+}
+
+POST http://localhost:3000/users
+content-type: application/json
+
+{
+    "username": "Arthur",
+    "tags": "Rank-Porcelain, Class-Paladin"
+}
+
+POST http://localhost:3000/users
+content-type: application/json
+
+{
+    "username": "Merlin",
+    "tags": "Rank-Diamond, Class-Mage",
+    "questsCompleted": 1
+}
+
+# QUEST BOARD TESTS
+
+
+GET http://localhost:3000/quests
+
+
+POST http://localhost:3000/quests
+content-type: application/json
+
+{
+    "o_id": "0",
+    "questName": "Find my lost cat...",
+    "completed": false,
+    "description": "I lost my cat when I got back tomy home it wasn't there hep",
+    "tags": "difficulty-Easy, location-Mondstadt",
+    "questBoard": 1
+
+}
