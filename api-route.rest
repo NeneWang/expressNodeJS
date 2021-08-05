@@ -35,7 +35,7 @@ content-type: application/json
 
 
 # Get data from Merlin
-GET https://simplenodeserver2.herokuapp.com/users/Merlin
+GET https://simplenodeserver2.herokuapp.com/users/Goku
 
 # QUEST BOARD TESTS
 
@@ -86,7 +86,7 @@ content-type: application/json
 
 {
     "o_id":"610bf56ad2cc930004bf9dd7",
-    "username":"Merl2in"
+    "username":"Merlin"
 
 }
 
