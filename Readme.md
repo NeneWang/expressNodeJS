@@ -6,7 +6,7 @@ Links
 
 - [Github Repo](https://github.com/NeneWang/lab4.2)
 - [API](https://simplenodeserver2.herokuapp.com/)
-- [Notion Documentation]()
+- [Notion Documentation](https://www.notion.so/bc4c1d0b25c84a24aefecae8636e30eb)
 
 This API emulates the classical RPG's Questboard system. You can create quests, aventurers, update and manage quest's or aventurer's information. 
 
@@ -48,7 +48,8 @@ const questSchema = new mongoose.Schema({
 - description: string type, records the description of the quest e.g "I last found my cat at the Plaza, now is no more!, help!"
 - tags: string type. Records tags given to the quest, separated by commas e.g: "difficulty-Easy, location-Mondstadt"
 
-# User
+# Endpoints
+## User
 
 ### Get all users
 
@@ -162,7 +163,7 @@ GET https://simplenodeserver2.herokuapp.com/users/Merlin
     }
     ```
 
-# Quest
+## Quest
 
 ### Get all Quests
 
