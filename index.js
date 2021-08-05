@@ -59,7 +59,7 @@ app.get("/users/:username", async (req, res) => {
         res.json(adqUsers);
     } else {
         res.status(404);
-        res.send(`User ${username} not found`);
+        res.json({message: `User ${username} not found`});
     }
 
 

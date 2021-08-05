@@ -45,33 +45,6 @@ GET https://simplenodeserver2.herokuapp.com/quests
 
 # Creating an quest
 
-POST https://simplenodeserver2.herokuapp.com/quests
-content-type: application/json
-
-{
-    "o_id": "0",
-    "questName": "Find my lost cat...",
-    "completed": false,
-    "description": "I lost my cat when I got back tomy home it wasn't there hep",
-    "tags": "difficulty-Easy, location-Mondstadt",
-    "questBoard": 1
-
-}
-
-# Updating the last quest
-POST https://simplenodeserver2.herokuapp.com/quests
-content-type: application/json
-
-{
-    "o_id": "610b56c328b234d4a42d3134",
-    "questName": "[update] Find my lost cat...",
-    "completed": false,
-    "description": "Now that I remember it was near the town plaza... I lost my cat when I got back tomy home it wasn't there hep",
-    "tags": "difficulty-Easy, location-Mondstadt",
-    "questBoard": 1
-
-}
-
 POST https://simplenodeserver2.herokuapp.com/new-quest
 content-type: application/json
 
@@ -83,12 +56,28 @@ content-type: application/json
 
 }
 
+# Updating the last quest
+POST https://simplenodeserver2.herokuapp.com/quests
+content-type: application/json
+
+{
+    "o_id": "610bf0ebd2cc930004bf9dc7",
+    "questName": "[update] Ghostly Waves...",
+    "completed": false,
+    "description": "Now that I remember it was near the town plaza... I lost my cat when I got back tomy home it wasn't there hep",
+    "tags": "difficulty-Easy, location-Mondstadt",
+    "questBoard": 1
+
+}
+
+
 
 
 # Getting a specific quest by ID
-GET https://simplenodeserver2.herokuapp.com/quests/610b58868c0d60bdc0f61939
+GET https://simplenodeserver2.herokuapp.com/quests/610bf0ebd2cc930004bf9dc7
 
-DELETE https://simplenodeserver2.herokuapp.com/quests/610b58868c0d60bdc0f61939
+# Delete Quest
+DELETE https://simplenodeserver2.herokuapp.com/quests/610bf0ebd2cc930004bf9dc7
 
 
 #Complete a quest
@@ -96,8 +85,8 @@ POST https://simplenodeserver2.herokuapp.com/complete-quest
 content-type: application/json
 
 {
-    "o_id":"610b949372945e000433ca1f",
-    "username":"Merlin"
+    "o_id":"610bf56ad2cc930004bf9dd7",
+    "username":"Merl2in"
 
 }
 
