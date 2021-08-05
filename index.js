@@ -117,6 +117,24 @@ app.get("/quests/:o_id", async (req, res) => {
 
 });
 
+app.delete("/quests/:o_id", async (req,res) => {
+    const {
+        o_id
+    } = req.params;
+    Quest.findByIdAndRemove(o_id, (err, data) => {
+        if(!err){
+            res.status(200)
+            res.json({message:`Deleted quest with ID: ${o_id}`});
+        }else{
+            res.status(404);
+            res.json({message:`Error deleting quest`});
+        }
+    });
+
+
+
+})
+
 
 app.post("/quests", async (req, res) => {
     const {
