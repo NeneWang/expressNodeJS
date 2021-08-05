@@ -38,6 +38,8 @@ content-type: application/json
 GET http://localhost:3000/quests
 
 
+# Creating an quest
+
 POST http://localhost:3000/quests
 content-type: application/json
 
@@ -47,6 +49,31 @@ content-type: application/json
     "completed": false,
     "description": "I lost my cat when I got back tomy home it wasn't there hep",
     "tags": "difficulty-Easy, location-Mondstadt",
+    "questBoard": 1
+
+}
+
+# Updating the last quest
+POST http://localhost:3000/quests
+content-type: application/json
+
+{
+    "o_id": "610b56c328b234d4a42d3134",
+    "questName": "[update] Find my lost cat...",
+    "completed": false,
+    "description": "Now that I remember it was near the town plaza... I lost my cat when I got back tomy home it wasn't there hep",
+    "tags": "difficulty-Easy, location-Mondstadt",
+    "questBoard": 1
+
+}
+
+POST http://localhost:3000/new-quest
+content-type: application/json
+
+{
+    "questName": "Ghostly Waves",
+    "description": "There are some weird waves moving around, I think they are ghosts..",
+    "tags": "difficulty-Medium, location-Mondstadt",
     "questBoard": 1
 
 }

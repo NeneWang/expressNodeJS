@@ -65,14 +65,14 @@ app.post("/users", async (req, res) => {
             newUser: user
         });
     } else {
-        await User.create({
+        const newUser = await User.create({
             username,
             tags,
             questsCompleted
         });
         res.json({
             message: "user created",
-            newUser: user
+            newUser: newUser
         });
     }
 
@@ -93,9 +93,7 @@ app.post("/quests", async (req, res) => {
         tags,
         questBoard,
     } = req.body;
-    const quest = await Quest.findOne({
-        o_id
-    }).exec();
+    const quest = await Quest.findById(o_id)
 
     if (quest) {
         quest.questName = questName;
@@ -120,6 +118,29 @@ app.post("/quests", async (req, res) => {
             newUser: newQuest
         });
     }
+})
+
+app.post("/new-quest", async (req, res) => {
+    const {
+        questName,
+        description,
+        tags,
+        questBoard,
+    } = req.body;
+
+    const completed = false;
+    const newQuest = await Quest.create({
+        questName,
+        completed,
+        description,
+        tags,
+        questBoard,
+    });
+    res.json({
+        message: "quest created",
+        newUser: newQuest
+    });
+
 })
 
 
