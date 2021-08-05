@@ -37,14 +37,15 @@ const Quest = mongoose.model("Quest", questSchema);
 
 
 app.get("/", (req, res) => {
-    res.send("Welcom to Questboard API")
+    res.status = 200;
+    res.send("Welcome to Questboard API")
 });
 
 
 app.get("/users", async (req, res) => {
 
     const adqUsers = await User.find({}).exec();
-
+    res.status = 200;
     res.json(adqUsers);
 })
 
@@ -56,6 +57,7 @@ app.get("/users/:username", async (req, res) => {
     if (adqUsers) {
         res.json(adqUsers);
     } else {
+        res.status(404);
         res.send(`User ${username} not found`);
     }
 
@@ -108,6 +110,7 @@ app.get("/quests/:o_id", async (req, res) => {
     if (adqQuest) {
         res.json(adqQuest);
     } else {
+        res.status(404);
         res.send(`Quest ${o_id} not found`);
     }
 
