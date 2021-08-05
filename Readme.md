@@ -6,7 +6,7 @@ Links
 
 - [Github Repo](https://github.com/NeneWang/lab4.2)
 - [API](https://simplenodeserver2.herokuapp.com/)
-- [Notion Documentation]()
+- [Notion Documentation](https://www.notion.so/bc4c1d0b25c84a24aefecae8636e30eb)
 
 This API emulates the classical RPG's Questboard system. You can create quests, aventurers, update and manage quest's or aventurer's information. 
 
