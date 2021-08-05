@@ -83,7 +83,20 @@ content-type: application/json
 
 }
 
+
+
 # Getting a specific quest by ID
 GET http://localhost:3000/quests/610b58868c0d60bdc0f61939
 
 DELETE http://localhost:3000/quests/610b58868c0d60bdc0f61939
+
+
+#Complete a quest
+POST http://localhost:3000/complete-quest
+content-type: application/json
+
+{
+    "o_id":"610b949372945e000433ca1f",
+    "username":"Merlin"
+
+}
