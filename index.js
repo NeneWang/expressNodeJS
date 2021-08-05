@@ -99,6 +99,22 @@ app.get("/quests", async (req, res) => {
     res.send(adqQuests);
 });
 
+app.get("/quests/:o_id", async (req, res) => {
+    const {
+        o_id
+    } = req.params;
+    const adqQuest = await Quest.findById(o_id)
+
+    if (adqQuest) {
+        res.json(adqQuest);
+    } else {
+        res.send(`Quest ${o_id} not found`);
+    }
+
+
+});
+
+
 app.post("/quests", async (req, res) => {
     const {
         o_id,

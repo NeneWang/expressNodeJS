@@ -81,3 +81,6 @@ content-type: application/json
     "questBoard": 1
 
 }
+
+# Getting a specific quest by ID
+GET http://localhost:3000/quests/610b58868c0d60bdc0f61939
