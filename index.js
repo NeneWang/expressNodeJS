@@ -160,7 +160,7 @@ app.post("/quests", async (req, res) => {
         quest.questBoard = questBoard;
         res.json({
             message: "Quest updated",
-            newUser: quest
+            quest: quest
         });
     } else {
         const newQuest = await Quest.create({
@@ -172,7 +172,7 @@ app.post("/quests", async (req, res) => {
         });
         res.json({
             message: "quest created",
-            newUser: newQuest
+            quest: newQuest
         });
     }
 })
@@ -195,7 +195,7 @@ app.post("/new-quest", async (req, res) => {
     });
     res.json({
         message: "quest created",
-        newUser: newQuest
+        quest: newQuest
     });
 
 });
