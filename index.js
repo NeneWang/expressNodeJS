@@ -78,6 +78,7 @@ app.post("/users", async (req, res) => {
     if (user) {
         user.tags = tags;
         user.questsCompleted = questsCompleted;
+        user.save();
         res.json({
             message: "User updated",
             user: user
@@ -158,6 +159,7 @@ app.post("/quests", async (req, res) => {
         quest.description = description;
         quest.tags = tags;
         quest.questBoard = questBoard;
+        quest.save();
         res.json({
             message: "Quest updated",
             quest: quest
