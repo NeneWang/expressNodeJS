@@ -3,10 +3,10 @@
 
 
 
-GET http://localhost:3000/users
+GET https://simplenodeserver2.herokuapp.com/users
 
 
-POST http://localhost:3000/users
+POST https://simplenodeserver2.herokuapp.com/users
 content-type: application/json
 
 {
@@ -15,7 +15,7 @@ content-type: application/json
     "questsCompleted": 123
 }
 
-POST http://localhost:3000/users
+POST https://simplenodeserver2.herokuapp.com/users
 content-type: application/json
 
 {
@@ -24,7 +24,7 @@ content-type: application/json
     "questsCompleted": 10
 }
 
-POST http://localhost:3000/users
+POST https://simplenodeserver2.herokuapp.com/users
 content-type: application/json
 
 {
@@ -35,17 +35,17 @@ content-type: application/json
 
 
 # Get data from Merlin
-GET http://localhost:3000/users/Merlin
+GET https://simplenodeserver2.herokuapp.com/users/Merlin
 
 # QUEST BOARD TESTS
 
 
-GET http://localhost:3000/quests
+GET https://simplenodeserver2.herokuapp.com/quests
 
 
 # Creating an quest
 
-POST http://localhost:3000/quests
+POST https://simplenodeserver2.herokuapp.com/quests
 content-type: application/json
 
 {
@@ -59,7 +59,7 @@ content-type: application/json
 }
 
 # Updating the last quest
-POST http://localhost:3000/quests
+POST https://simplenodeserver2.herokuapp.com/quests
 content-type: application/json
 
 {
@@ -72,7 +72,7 @@ content-type: application/json
 
 }
 
-POST http://localhost:3000/new-quest
+POST https://simplenodeserver2.herokuapp.com/new-quest
 content-type: application/json
 
 {
@@ -86,20 +86,9 @@ content-type: application/json
 
 
 # Getting a specific quest by ID
-GET http://localhost:3000/quests/610b58868c0d60bdc0f61939
+GET https://simplenodeserver2.herokuapp.com/quests/610b58868c0d60bdc0f61939
 
-DELETE http://localhost:3000/quests/610b58868c0d60bdc0f61939
-
-
-#Complete a quest
-POST http://localhost:3000/complete-quest
-content-type: application/json
-
-{
-    "o_id":"610b949372945e000433ca1f",
-    "username":"Merlin"
-
-}
+DELETE https://simplenodeserver2.herokuapp.com/quests/610b58868c0d60bdc0f61939
 
 
 #Complete a quest
@@ -111,3 +100,4 @@ content-type: application/json
     "username":"Merlin"
 
 }
+
