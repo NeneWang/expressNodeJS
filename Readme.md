@@ -48,7 +48,8 @@ const questSchema = new mongoose.Schema({
 - description: string type, records the description of the quest e.g "I last found my cat at the Plaza, now is no more!, help!"
 - tags: string type. Records tags given to the quest, separated by commas e.g: "difficulty-Easy, location-Mondstadt"
 
-# User
+# Endpoints
+## User
 
 ### Get all users
 
@@ -162,7 +163,7 @@ GET https://simplenodeserver2.herokuapp.com/users/Merlin
     }
     ```
 
-# Quest
+## Quest
 
 ### Get all Quests
 
