@@ -44,8 +44,23 @@ app.get("/", (req, res) => {
 app.get("/users", async (req, res) => {
 
     const adqUsers = await User.find({}).exec();
-    res.send(adqUsers);
+
+    res.json(adqUsers);
 })
+
+app.get("/users/:username", async (req, res) => {
+    const username = req.params.username;
+    console.log(`Retrieving ${username} data`);
+    const adqUsers = await User.findOne({username})
+
+    if (adqUsers) {
+        res.json(adqUsers);
+    } else {
+        res.send(`User ${username} not found`);
+    }
+
+
+});
 
 
 app.post("/users", async (req, res) => {

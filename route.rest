@@ -32,6 +32,10 @@ content-type: application/json
     "questsCompleted": 1
 }
 
+
+# Get data from Merlin
+GET http://localhost:3000/users/Merlin
+
 # QUEST BOARD TESTS
 
 
