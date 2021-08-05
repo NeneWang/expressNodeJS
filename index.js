@@ -1,9 +1,11 @@
 const express  = require("express");
+const mongoose = require("mongoose");
+
+
 const app = express();
 const importData = require("./data.json")
 let port = process.env.PORT || 3000;
 
-const mongoose = require("mongoose");
 
 
 mongoose.connect("mongodb+srv://nelson:1223@cluster0.kzhr5.mongodb.net/todo?retryWrites=true&w=majority", {
@@ -38,7 +40,9 @@ app.get("/players", (req, res) => {
 } )
 
 app.get("/users", async (req, res) => {
-    res.json(User.find());
+    
+  const adqUsers = await User.findOne({"username":"wangnelson2@gmail.com"}).exec();
+    res.send(adqUsers);
 } )
 
 
