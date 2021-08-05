@@ -80,7 +80,7 @@ app.post("/users", async (req, res) => {
         user.questsCompleted = questsCompleted;
         res.json({
             message: "User updated",
-            newUser: user
+            user: user
         });
     } else {
         const newUser = await User.create({
@@ -90,7 +90,7 @@ app.post("/users", async (req, res) => {
         });
         res.json({
             message: "user created",
-            newUser: newUser
+            user: newUser
         });
     }
 

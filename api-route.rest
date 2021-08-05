@@ -29,8 +29,8 @@ content-type: application/json
 
 {
     "username": "Merlin",
-    "tags": "Rank-Diamond, Class-Mage",
-    "questsCompleted": 1
+    "tags": "Rank-Gold, Class-Mage",
+    "questsCompleted": 150
 }
 
 
