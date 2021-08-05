@@ -52,7 +52,9 @@ app.get("/users", async (req, res) => {
 app.get("/users/:username", async (req, res) => {
     const username = req.params.username;
     console.log(`Retrieving ${username} data`);
-    const adqUsers = await User.findOne({username})
+    const adqUsers = await User.findOne({
+        username
+    })
 
     if (adqUsers) {
         res.json(adqUsers);
@@ -117,17 +119,21 @@ app.get("/quests/:o_id", async (req, res) => {
 
 });
 
-app.delete("/quests/:o_id", async (req,res) => {
+app.delete("/quests/:o_id", async (req, res) => {
     const {
         o_id
     } = req.params;
     Quest.findByIdAndRemove(o_id, (err, data) => {
-        if(!err){
+        if (!err) {
             res.status(200)
-            res.json({message:`Deleted quest with ID: ${o_id}`});
-        }else{
+            res.json({
+                message: `Deleted quest with ID: ${o_id}`
+            });
+        } else {
             res.status(404);
-            res.json({message:`Error deleting quest`});
+            res.json({
+                message: `Error deleting quest`
+            });
         }
     });
 
@@ -193,7 +199,48 @@ app.post("/new-quest", async (req, res) => {
         newUser: newQuest
     });
 
-})
+});
+
+app.post("/complete-quest", async (req, res) => {
+    const {
+        o_id,
+        username
+    } = req.body;
+
+    const quest = await Quest.findById(o_id)
+
+    const user = await User.findOne({
+        username
+    })
+
+
+    if (quest && user) {
+
+        quest.completed = true
+        user.questsCompleted++;
+
+        await quest.save();
+        await user.save();
+
+
+        res.json({
+            message: `Quest id: ${o_id} Completed by ${username}`,
+            user: user,
+            quest: quest
+        });
+    }else{
+        res.status = 404;
+        res.json({
+            message: `Quest with id: ${o_id} or User with username: ${username} not found`
+        })
+    }
+
+
+
+
+});
+
+
 
 
 

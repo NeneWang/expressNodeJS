@@ -12,7 +12,7 @@ content-type: application/json
 {
     "username": "Merlin",
     "tags": "Rank-Diamond, Class-Mage",
-    "questsCompleted": 0
+    "questsCompleted": 123
 }
 
 POST http://localhost:3000/users
@@ -20,7 +20,8 @@ content-type: application/json
 
 {
     "username": "Arthur",
-    "tags": "Rank-Porcelain, Class-Paladin"
+    "tags": "Rank-Porcelain, Class-Paladin",
+    "questsCompleted": 10
 }
 
 POST http://localhost:3000/users
