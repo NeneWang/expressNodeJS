@@ -38,7 +38,7 @@ const Quest = mongoose.model("Quest", questSchema);
 
 app.get("/", (req, res) => {
     res.status = 200;
-    res.send("Welcome to Questboard API")
+    res.send("Welcome to Questboard API v1.2")
 });
 
 
