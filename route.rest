@@ -100,3 +100,14 @@ content-type: application/json
     "username":"Merlin"
 
 }
+
+
+#Complete a quest
+POST https://simplenodeserver2.herokuapp.com/complete-quest
+content-type: application/json
+
+{
+    "o_id":"610b949372945e000433ca1f",
+    "username":"Merlin"
+
+}

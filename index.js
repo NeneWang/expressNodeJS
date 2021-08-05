@@ -5,7 +5,6 @@ const mongoose = require("mongoose");
 
 
 const app = express();
-const importData = require("./data.json")
 let port = process.env.PORT || 3000;
 
 app.use(cors());
